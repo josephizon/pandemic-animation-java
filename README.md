@@ -1,2 +1,12 @@
-# pandemic-animation-java
-Old java animation project from my first year of college during the pandemic. 
+# Project from 1st Year of College
+- Old Java animation project from my first year of college during the pandemic. 
+
+## Project Description
+- Midterm project for CSCI 22 class
+- Dealt with creating animations using Java's swing and awt packages
+
+## How to Run
+1. Compile the Java files with the following command:
+`javac scenes/*.java scenes/components/*.java`
+2. Run the Java file via:
+`java scenes.SceneStarter`
