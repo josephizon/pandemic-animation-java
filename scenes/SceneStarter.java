@@ -19,7 +19,7 @@
 	that has been clearly noted with a proper citation in the comments 
 	of my program.
 */
-
+package scenes; 
 
 public class SceneStarter {
 

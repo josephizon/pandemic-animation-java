@@ -1,6 +1,5 @@
 /**
-	Sun class is similar to the Moon class wherein its just two ellipses overlapped to make it appear as if it had an outline. 
-    This class also only appears in the DayMode. 
+	This is the Moon class which consists of two Ellipse. One circle is the inner circle, the other just serves as an outline for the Moon. 
 	
 	@author Joseph Raymund F. Izon (202605)
 	@version April 6, 2021
@@ -19,21 +18,22 @@
 	that has been clearly noted with a proper citation in the comments 
 	of my program.
 */
+package scenes.components; 
 
 import java.awt.*; 
 import java.awt.geom.*; //used for importing shapes 
 
-public class Sun implements DrawingObject {
+public class Moon implements DrawingObject {
     
     private double size;
     private int x;
     private int y;
     private int alpha;  
 
-     /**
+    /**
      * This is the constructor which initializes the x and y values which are the positions of the moon, the size of the moon, and the alpha used for transparency. 
      */
-    public Sun() {
+    public Moon() {
         x = 850;
         y = 100; 
         size = 250;
@@ -41,35 +41,34 @@ public class Sun implements DrawingObject {
     }
 
     /**
-     * This is the draw method which I used to draw the sun of DayMode. 
+     * This is the draw method which I used to draw the moon of NightMode. 
      */
     public void draw(Graphics2D g2d) {
         Ellipse2D.Double sun1 = new Ellipse2D.Double(x-10, y-13, size+25, size+25); 
-        g2d.setColor(new Color(255, 110, 14, alpha) ); 
+        g2d.setColor(new Color(108, 108, 108, alpha) ); 
         g2d.fill(sun1);
 
         Ellipse2D.Double sun = new Ellipse2D.Double(x, y, size, size); 
-        g2d.setColor(new Color(255, 224, 80, alpha) ); 
+        g2d.setColor(new Color(229, 229, 229, alpha) ); 
         g2d.fill(sun);
-
-        
     }
 
     /**
-     * sunRising method raises the value of alpha to so that it appears slowly while at the same time the y-value is decreased so that it appears as if the sun is rising
+     * moonRising method raises the value of alpha to so that it appears slowly while at the same time the y-value is decreased so that it appears as if the moon is rising
      */
-    public void sunRising() {
+    public void moonRising() {
         if (alpha < 255) {
             alpha += 15;
             y -= 10;
-        }
+        }  
     }
-
+    
     /**
-     * sunOff method resets the value of alpha and the vertical position of the sun. 
+     * moonOff method resets the value of alpha and the vertical position of the moon. 
      */
-    public void sunOff() {
+    public void moonOff() {
        alpha = 0;
-       y = 100; 
+       y = 100;
+
     }
 }

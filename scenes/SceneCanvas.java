@@ -19,7 +19,9 @@
 	that has been clearly noted with a proper citation in the comments 
 	of my program.
 */
+package scenes; 
 
+import scenes.components.*;
 import javax.swing.*; //for JComponents 
 import java.util.*; 
 import java.awt.*; //for Layouts 

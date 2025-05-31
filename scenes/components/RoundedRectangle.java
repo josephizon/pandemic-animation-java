@@ -1,5 +1,6 @@
 /**
-	Line class that is just the outline of the cellphone I made. This is literally just the grey outline of the phone. 
+	This is the RoundedRectangle class which is basically the main body of the cellphone. This is the main part of the composite shape which 
+    was required. 
 	
 	@author Joseph Raymund F. Izon (202605)
 	@version April 6, 2021
@@ -18,27 +19,25 @@
 	that has been clearly noted with a proper citation in the comments 
 	of my program.
 */
+package scenes.components; 
 
 import java.awt.*; 
 import java.awt.geom.*; //used for importing shapes 
 
-public class Line implements DrawingObject{
-    
-    private int stroke;
+public class RoundedRectangle implements DrawingObject {
+
     private Color color;
 
     /**
      * This is the constructor of the class wherein all values are initialized here. 
-     * @param stroke - sets the stroke of the outline of the cellphone. 
-     * @param color - sets the color of the outline of the cellphone. 
+     * @param color - sets the color of the body of the cellphone. 
      */
-    public Line(int stroke, Color color) {
-        this.stroke = stroke; 
+    public RoundedRectangle(Color color) {
         this.color = color;
     }
 
     /**
-     * This is the draw method which I used to draw the outline of the cellphone. 
+     * This is the draw method which I used to draw the body of the cellphone. 
      */
     public void draw(Graphics2D g2d) {
         Path2D.Double point = new Path2D.Double();
@@ -51,11 +50,8 @@ public class Line implements DrawingObject{
         point.lineTo(400, 200);
         point.curveTo(400, 100, 400, 100, 500, 100);
         point.closePath();
-        
-        g2d.translate(-30, 35);
-        
+
         g2d.setColor(color);
-        g2d.setStroke(new BasicStroke(stroke));
-        g2d.draw(point);
+        g2d.fill(point);
     }
 }
