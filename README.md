@@ -1,4 +1,4 @@
-# Project from 1st Year of College
+# ☕ Java Animation from First Year
 - Old Java animation project from my first year of college during the pandemic. 
 
 ## ✏️ Project Description
